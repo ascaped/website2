@@ -43,10 +43,21 @@
     </div>
   </div>
 
-  <!-- Add sound effect -->
-  <audio id="pageSound" autoplay>
+  <!-- Ses ikonunu buraya ekliyoruz -->
+  <img src="bruhxd.png" class="sound-icon" alt="Ses oynat" onclick="playSound()">
+
+  <!-- Audio element -->
+  <audio id="pageSound">
     <source src="onsight.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- JavaScript ile sesi oynatma fonksiyonu -->
+  <script>
+    function playSound() {
+      var audio = document.getElementById("pageSound");
+      audio.play();
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>

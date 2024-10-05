@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('background.png');
+  background-image: url('bg31.png');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -94,3 +94,12 @@
     color: white;
   }
   
+  /* Ses İkonu Stili */
+.sound-icon {
+  position: absolute;
+  bottom: 20px; /* İkonun alt konumu */
+  right: 20px;  /* İkonun sağ konumu */
+  width: 50px;  /* İkon genişliği */
+  height: 50px; /* İkon yüksekliği */
+  cursor: pointer; /* Fare ile tıklanabilirlik */
+}
