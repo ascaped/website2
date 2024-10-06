@@ -1,19 +1,19 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
 /* Background Image */
 .background {
   position: fixed;
@@ -26,80 +26,91 @@
   background-position: center;
   z-index: -1;
 }
-  
-  /* Profile Card */
-  .profile-card {
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    border-radius: 15px;
-    padding: 40px;
-    width: 500px;
-    text-align: center;
-    backdrop-filter: blur(10px); /* Blurred background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  /* Profile Image */
-  .profile-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  /* Profile Name with RGB Effect */
-  @keyframes rainbow {
-    0% { color: red; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: rgb(0, 175, 0); }
-    100% { color: blue; }
-  }
-  
-  .profile-name {
-    font-size: 28px;
-    font-weight: bold;
-    animation: rainbow 5s infinite linear;
-  }
-  
-  /* Profile Description */
-  .profile-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #fff;
-  }
-  
-  /* Social Links */
-  .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-  }
-  
-  .social-links img {
-    width: 40px;
-    height: 40px;
-    filter: drop-shadow(0 0 5px #000);
-  }
-  
-  /* Profile Views */
-  .profile-views {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-  }
-  
-  .view-counter {
-    font-size: 14px;
-    color: white;
-  }
-  
-  /* Ses İkonu Stili */
+
+/* Profile Card */
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 15px;
+  padding: 40px;
+  width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Blurred background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Profile Image */
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Profile Name with Extended RGB Effect */
+@keyframes rainbow {
+  0% { color: red; }
+  15% { color: orange; }
+  28% { color: yellow; }
+  49% { color: rgb(0, 175, 0); } /* Yeşil */
+  67% { color: blue; }
+  74% { color: indigo; }
+  85% { color: violet; }
+  96% { color: pink; }
+  100% { color: red; } /* Pembe'den tekrar kırmızıya dönüş */
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: bold;
+  animation: rainbow 10s infinite linear; /* Animasyon süresi 10 saniyeye çıkarıldı */
+}
+
+/* Profile Description */
+.profile-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Social Links */
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 5px rgb(222, 222, 222));
+}
+
+/* Profile Views */
+.profile-views {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+/* Ses İkonu Stili */
 .sound-icon {
   position: absolute;
-  bottom: 20px; /* İkonun alt konumu */
-  right: 20px;  /* İkonun sağ konumu */
-  width: 50px;  /* İkon genişliği */
+  top: 20px; /* İkonun üst konumu */
+  right: 20px; /* İkonun sağ konumu */
+  width: 50px; /* İkon genişliği */
   height: 50px; /* İkon yüksekliği */
   cursor: pointer; /* Fare ile tıklanabilirlik */
+  filter: drop-shadow(0 0 8px rgb(222, 222, 222));
+}
+
+/* Başlangıçta opaklığı sıfır olan elementler */
+.profile-card, .profile-name, .profile-description, .profile-image img, .social-links a {
+  opacity: 0;
+}
+
+/* Sosyal medya ikonlarına hover efekti */
+.social-links a:hover img {
+  transform: scale(1.1); /* Büyütme efekti */
+  transition: transform 0.3s; /* Geçiş süresi */
 }
